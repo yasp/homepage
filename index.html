@@ -1,49 +1,87 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-  <title>yasp</title>
-  <style type="text/css">
-    h1
-    {
-      font-size: 2.5em;
-      margin-bottom: 0;
-    }
-    h2
-    {
-      margin: 0;
-      margin-bottom: 0.8em;
-      font-size: 0.8em;
-    }
-    ul
-    {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
-    ul > li
-    {
-      display: inline-block;
-    }
-    ul > li:before
-    {
-      content: " | ";
-      font-size: 150%;
-    }
-    ul > li:first-child:before
-    {
-      content: "";
-    }
-  </style>
+    <title>yasp</title>
+
+    <link href="./style/main.css" rel="stylesheet" type="text/css">
+
+    <meta charset=utf-8 />
 </head>
 <body>
-  <center>
-    <h1>yasp.</h1>
-    <h2>Diplomprojekt an der HTL Spengergasse</h2>
-    <ul>
-      <li><a href="/pflichtenheft/">Pflichtenheft</a></li>
-      <li><a href="/yasp/src/app/test/repl.html">Demo</a></li>
-      <li><a href="/">Projektbeschreibung</a></li>
-    </ul>
-  </center>
+    <center>
+        <img src="./img/logo.png" id="logo">
+        <ul id="menu">
+            <li><a href="http://demo.yasp.me/">Demo</a></li>
+            <li><a href="http://github.com/yasp/yasp">GitHub</a></li>
+            <li><a href="https://github.com/yasp/yasp/tree/master/doc">Documentation</a></li>
+            <li><a href="/pflichtenheft/">Pflichtenheft</a></li>
+        </ul>
+        <hr>
+        <div id="description">
+            <h2>Project</h2>
+            <p>
+                yasp is a fully functional web-based assembler development environment, including a real assembler and debugger. The assembler dialect is a custom one which is very simple to keep the learning curve as shallow as possible. It also features some hardware-elements (LED, Potentiometer, Button, etc.). The main purpose of this project is to create an environment in which students can learn the assembly language to understand computers better. It also allows them to experiment easily because there is nothing they can break.
+            </p>
+            <p>
+                yasp started out as a school project and was then later, in early 2014, released into public as GPL.
+            </p>
+            <h2>Team</h2>
+            <p>
+                The original project team of yasp consists of <a href="http://programming-with-design.at/">Robert Fischer</a> and <a href="http://luto.at">Michael "luto" Lutonsky</a>. For more information take a look at the about-section in the IDEs menu.
+            </p>
+            <h2>Features</h2>
+            <p>
+                yasp features 43 instructions (73 with all overloads), which can access it's 32 byte and word registers and the connected hardware. The main features of the project are:
+            </p>
+            <ul id="features">
+                <li>
+                    Editor
+                    <ul>
+                        <li>syntax highliting</li>
+                        <li>live error-checking</li>
+                        <li>interactive quickhelp</li>
+                    </ul>
+                </li>
+                <li>Debugger with many features, such as breakpoints and step back</li>
+                <li>Emulator
+                    <ul>
+                        <li>16-byte stack</li>
+                        <li>simple subroutines</li>
+                        <li>hardware-interrupts</li>
+                        <li>32 byte registers, 32 word registers</li>
+                        <li>PWM-Simulation (soft blinking LEDs)</li>
+                        <li>25 kHz in benchmarks on a i7-3630QM</li>
+                        <li>carry and zero flag</li>
+                    </ul>
+                </li>
+                <li>
+                    Hardwaresimulation
+                    <ul>
+                        <li>LED</li>
+                        <li>Pushbutton</li>
+                        <li>potentiometer</li>
+                    </ul>
+                </li>
+                <li>
+                    43 instructions (73 including overloads)
+                    <ul>
+                        <li>basics like MOV, ADD, XOR, RR, MUL, CLR, OR, ...</li>
+                        <li>program flow: JMP, JC, JNC, JZ, CALL, RET, ...</li>
+                        <li>make use of the stack with PUSH or POP</li>
+                        <li>interupt commands: ENABLE, DISABLE, RETI</li>
+                        <li>hardware interaction: HIGH, LOW, TOGGLE, ADC, ...</li>
+                        <li>talk to the debugger using DEBUG and ECHO</li>
+                    </ul>
+                </li>
+                <li>Filemanager</li>
+            </ul>
+        </div>
+        <hr>
+        <div id="logos">
+            <a href="https://uberspace.de/"><img src="./img/uberspace.png"></a>
+            <a href="http://www.gnu.org/licenses/gpl.html"><img src="./img/gplv3.png"></a>
+            <a href="http://www.spengergasse.at/"><img id="spglogo" src="./img/spg.png"></a>
+        </div>
+    </center>
 </body>
 </html>
