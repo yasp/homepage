@@ -4,6 +4,11 @@ body {
     font-family: monospace;
 }
 
+img.debugger {
+    width:90%;
+    margin-left: 5%
+}
+
 hr {
     max-width: 580px;
 }
